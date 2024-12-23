@@ -186,8 +186,8 @@ DJOSER = {
     } 
 }
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '404685068805-mdc4chrl8a9ihjmjhjlgm618p17u8uem.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ['client_id']
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ['client_secret']
 SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile', 'openid']
 SOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']
 
