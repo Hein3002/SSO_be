@@ -62,9 +62,10 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://127.0.0.1:8000",
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:8000",
+    "http://localhost:5173",
+]
 
 
 ROOT_URLCONF = 'auth_system.urls'
@@ -184,7 +185,7 @@ DJOSER = {
     'ACTIVATION_URL':'activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL':True,
     'SOCIAL_AUTH_TOKEN_STRATEGY': 'djoser.social.token.jwt.TokenStrategy',
-    'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': ['http://localhost:8000'],
+    'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': ['http://127.0.0.1:8000/google'],
     'SERIALIZERS':{
         'user_create' : 'accounts.serializers.UserCreateSerializer',
         'user' : 'accounts.serializers.UserCreateSerializer',
@@ -193,8 +194,8 @@ DJOSER = {
     } 
 }
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ['client_id']
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ['client_secret']
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '404685068805-mdc4chrl8a9ihjmjhjlgm618p17u8uem.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile', 'openid']
 SOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']
 
